@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+
+/* ------ configuracao padrao do inicio da pagina ----- */
+
+
+
+.nav-logo {
+    padding: 10px;
+}
+
+.nav-bar {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--cor4);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.26);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-family: var(--fonte-padrao);
+    font-size: 1.3rem;
+    color: white;
+}
+
+.login-button button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2rem;
+    background-color: var(--cor1);
+    box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.445);
+}
+
+/* -------- secao inicial -------- */
+
+
+.secao1 {
+    background-image: url('../img/background.png');
+    background-size: cover;
+    padding: 20px;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.div-container {
+    background-color: #3b885c59;
+    backdrop-filter: blur(06px); /* deixa esfumaçado */
+    border-radius: 20px;
+    box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.445);
+    height: 50vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 700px;
+}
+
+.item-login {
+    justify-content: space-between;
+}
+
+.item-login p {
+    font-family: var(--fonte-padrao);
+    font-size: 1.5rem;
+    color: var(--cor4);
+    padding: 10px;
+}
+
+.botao-login {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+#paragrafo-especial {
+    font-size: 1.0rem; 
+}
+
+.item-login h1 {
+    font-family: var(--fonte-padrao);
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    
+}

@@ -1,0 +1,162 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* cores composta */
+:root {
+    --cor-composto1: #F5EC20;
+    --cor-composto2: #F59F20;
+    --cor-composto3: #F57B20;
+    --cor-composto4: #AD932B;
+    --cor-composto5: #6E5837;
+    --cor-composto6: #6E6337;
+    --cor-composto7: #000BED; 
+    --cor-composto8: #0056ED;
+    --cor-composto9: #4200ED;
+    --cor-composto10: #374B6E;
+    --cor-composto11: #2D2E43;
+    --cor-composto12: #7500ED;
+    --cor-composto13: #46376E;
+}
+
+
+/*cores monocromatico*/
+:root {
+    --cor1: #EDBE00; /* Cor Principal*/
+    --cor2: #CAA23C;
+    --cor3: #A0884A;
+    --cor4: #75694A;
+    --cor5: #4B463C;
+    --cor6: #33312B;
+}
+
+
+:root {
+    --font-primary: 'PlayfairDisplay-VariableFont_wght', serif;
+    --font-secondary: 'BebasNeue-Regular', sans-serif;
+}
+
+/* --------------------- configuração dos menu (inicio) --------------------- */
+
+header {
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.nav-bar {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 1px 1px 15px 1px rgba(71, 66, 37, 0.445);
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo p {
+    font-family: var(--font-primary);
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;   
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;   
+}
+
+li:hover {
+    /* colocar depois */
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    font-family: var(--font-secondary);
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.login.button {
+    padding: 10px;
+}
+
+button:hover {
+    box-shadow: 1px 1px 15px 8px rgba(231, 202, 39, 0.651);
+}
+
+.login-button button {
+    border: none;
+    background-color: var(--cor1);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+
+.login-button button > a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+
+/*adicionar mais tarde as funcoes do mobile menu */
+.mobile-menu {
+    display: none;
+}
+
+/*adicionar mais tarde as funcoes do mobile menu */
+.mobile-menu-icon {
+    display: none;
+}
+
+
+/* ---------------------- secao 1 inicio ---------------------- */
+
+.corrupcao-brasil {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    font-family: var(--font-secondary);
+    margin: auto;
+    margin-bottom: 7rem;
+    max-width: 900px;
+    border-radius: 30px;
+    box-shadow: 5px 10px 15px 6px rgba(71, 66, 37, 0.377);
+    background-color: rgb(221, 219, 219);
+}
+
+
+.corrupcao-brasil-conteudo {
+    display: flex;
+    padding: 10px;
+}
+
+.corrupcao-brasil-conteudo p {
+    padding: 10px;
+    text-align: justify;
+    text-indent: 3rem;
+}
+
+#titulo {
+    padding: 30px;
+}
+
+.quebra-texto h1 {
+    font-size: 1rem;
+}

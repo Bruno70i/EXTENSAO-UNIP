@@ -1,0 +1,427 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* cores composta */
+:root {
+    --cor-composto1: #F5EC20;
+    --cor-composto2: #F59F20;
+    --cor-composto3: #F57B20;
+    --cor-composto4: #AD932B;
+    --cor-composto5: #6E5837;
+    --cor-composto6: #6E6337;
+    --cor-composto7: #000BED; 
+    --cor-composto8: #0056ED;
+    --cor-composto9: #4200ED;
+    --cor-composto10: #374B6E;
+    --cor-composto11: #2eb82e;
+    --cor-composto12: #7500ED;
+    --cor-composto13: #46376E;
+}
+
+
+/*cores monocromatico*/
+:root {
+    --cor1: #5cf51f; /* Cor Principal*/
+    --cor2: #CAA23C;
+    --cor3: #A0884A;
+    --cor4: #75694A;
+    --cor5: #4B463C;
+    --cor6: #33312B;
+}
+
+
+:root {
+    --font-primary: 'PlayfairDisplay-VariableFont_wght', serif;
+    --font-secondary: 'BebasNeue-Regular', sans-serif;
+}
+
+/* --------------------- configuração dos menu (inicio) --------------------- */
+
+header {
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.nav-bar {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 1px 1px 15px 1px rgba(71, 66, 37, 0.445);
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo p {
+    font-family: var(--font-secondary);
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;   
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;   
+}
+
+li:hover {
+    /* colocar depois */
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    font-family: var(--font-secondary);
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.login.button {
+    padding: 10px;
+}
+
+button:hover {
+    box-shadow: 1px 1px 15px 8px rgba(231, 202, 39, 0.651);
+}
+
+.login-button button {
+    border: none;
+    background-color: var(--cor1);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+
+.login-button button > a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+
+/*adicionar mais tarde as funcoes do mobile menu */
+.mobile-menu {
+    display: none;
+}
+
+/*adicionar mais tarde as funcoes do mobile menu */
+.mobile-menu-icon {
+    display: none;
+}
+
+
+
+/* -------------------- secao 1 inicio do site -------------------- */
+.secao-main {
+    margin: auto;
+    text-align: center;
+    max-width: 1200px;
+    /*height: 80vh;*/
+    display: flex;
+    
+    
+}
+
+.div-intro {
+    font-family: var(--font-secondary);
+    padding: 20px;
+    
+    /* Centraliza a div dentro do container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+.div-intro h1 {
+    font-size: 50px;
+}
+
+.div-intro p {
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    transition: 0.9s;
+}
+
+
+.btn-compras {
+    padding-top: 150px;
+    
+}
+
+.btn-buy-card {
+    margin: 15px;
+    font-weight: bolder;
+    font-size: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-buy-crypto {
+    margin: 15px;
+    font-weight: bolder;
+    font-size: 15px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: var(--cor1);
+    border: none;
+}
+
+
+.div-intro-foto_wallpaper {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1; /* Faz com que as duas divs ocupem o mesmo espaço */
+    padding: 20px;
+}
+
+
+/* -------------------- secao 1 FINAL -------------------- */
+
+
+.div-token {
+    background-color: var(--cor1);
+    font-family: var(--font-secondary);
+    font-size: 15px;
+    text-align: center;
+    padding: 20px;
+    margin: 5rem 0px 8rem;
+}
+
+.div-token h1 {
+    font-weight: 500;
+}
+
+
+/* -------------------- secao 2 INICIO -------------------- */
+.secao-main2 {
+    margin: auto;
+    align-items: center;
+    background-color: var(--cor-composto11);
+    color: white;
+    display: flex;
+    justify-content: space-around; /* organiza os itens no centro */
+    padding: 55px;
+    max-width: 1000px;
+    box-shadow: 5px 10px 15px 6px rgba(71, 66, 37, 0.377);
+    margin-bottom: 100px;
+    border-radius: 20px;
+}
+
+.div-texto {
+    max-width: 700px;
+}
+
+.div-texto h2 {
+    font-family: var(--font-secondary);
+    padding: 10px 10px 10px 0px;
+}
+
+.div-texto p {
+    font-family: var(--font-secondary);
+    line-height: 1.3; /*espaços entre linhas*/
+    text-indent: 2rem; /* indenta o texto */
+    padding: 10px 10px 10px 0px;
+    text-align: justify;
+    font-size: 17px;
+}
+
+
+.div-foto {
+    text-align: center;
+    width: 30rem;
+}
+
+
+/* -------------------- secao 2 FINAL -------------------- */
+
+
+
+
+
+/* -------------------- secao 3 INCIO -------------------- */
+
+
+.div-caracteristicas {
+    text-align: center;
+    max-width: 1500px;
+    margin: auto;
+    font-family: var(--font-secondary);
+}
+
+.div-caracteristicas h1 {
+    font-size: 25px;
+    padding: 20px;
+}
+
+.div-texto-caracteristicas {
+    text-align: justify;
+    padding: 10px;
+    display: flex;
+    border-radius: 20px;
+}
+
+.div-texto-caracteristicas P {
+    font-size: 18px;
+}
+
+.text-item {
+    padding: 20px;
+    background-color: var(--cor1);
+    display: flex;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.589);
+}
+
+
+
+/* -------------------- secao 3 FINAL -------------------- */
+
+
+
+
+/* -------------------- SECAO 4 INCIO -------------------- */
+
+.secao-main4 {
+    text-align: center;
+    margin: 10rem 0px 10rem 0px;
+    padding: 20px;
+    background-color: var(--cor-composto11);
+    display: flex;
+    justify-content: center;
+}
+
+.div-conteudo {
+    max-width: 600px;
+    margin: 0px 20px 0px 20px;
+}
+
+.div-conteudo h1 {
+    color: white;
+    padding: 10px;
+    font-family: var(--font-secondary);
+    font-size: 25px;
+}
+
+.div-conteudo p {
+    color: white;
+    font-family: var(--font-secondary);
+    text-align: justify;
+    padding: 10px;
+    font-size: 18px;
+}
+
+
+
+/* -------------------- SECAO 4 FIM -------------------- */
+
+
+
+/* -------------------- SECAO 5 inicio -------------------- */
+
+.secao-main5 {
+    text-align: center;
+    margin-bottom: 7rem;
+    
+}
+
+.div-title-como-adquirir h1 {
+    font-size: 25px;
+    padding: 20px;
+    font-family: var(--font-secondary);
+}
+
+.div-main-como-comprar {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    margin: auto;
+}
+
+.div-container h2 {
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    color: var(--cor-composto3);
+    padding: 20px;
+}
+
+.logo-itens {
+    margin: 20px;
+}
+
+/* -------------------- SECAO 5 FIM -------------------- */
+
+
+
+/* -------------------- SECAO 6 inicio -------------------- */
+
+.secao-main6 {
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    background-color: #000BED; /* aqui vai o back grand de imagme- */
+}
+
+.div-revolucao {
+    margin: auto;
+    padding: 20px;
+    max-width: 800px;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-secondary);
+    border-radius: 20px;
+    background-color: rgb(27, 204, 56);
+    box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.445);
+}
+
+.div-content {
+    justify-content: center;
+}
+
+
+
+
+
+/* -------------------- SECAO 6 fim -------------------- */
+
+
+
+
+
+footer {
+    margin: 10rem 0px 0px 0px;
+    font-family: var(--font-secondary);
+    font-weight: bolder;
+    background-color: var(--cor-composto11);
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
