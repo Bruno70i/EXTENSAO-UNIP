@@ -1,38 +1,26 @@
-const express = require('express'); // é o framework HTTP.
-const sqlite3 = require('sqlite3').verbose(); // é o driver que vai falar com seu arquivo .db.
+// app.js
+var express = require('express');
+var app = express();
 
-// Inicia a instância do Express, Isso dá o objeto app, que controla rotas, middlewares e o servidor em si.
-const app = express();
-
-
-// Abre a conexão com o banco
-const db = new sqlite3.Database('./database.db', function(errorConexao) {
-  if (errorConexao) {
-    console.error('Erro ao abrir o DB:', errorConexao.message);
-  } else {
-    console.log('Conectado ao SQLite em database.db');
-  }
-});
-
-// habilita o middleware, Permitindo o Express acessar e entender o .json
+// Habilita JSON no corpo das requisições
 app.use(express.json());
 
-// req = requisicao
-// res = respostra
-app.get('/', function(requisicao, resposta) {
-  resposta.send('Hello world!');
+// uma forma do servidor  mostrar os arquivos estáticos, tipo os arquivos HTML CSS e JavaScript antes de processar as outras requisições
+app.use(express.static('public'));
+
+// Importa as rotas de users
+var usersRouter = require('./controllers/users');
+
+// Monta o router em '/users'
+app.use('/users', usersRouter);
+
+// Rota raiz apenas para teste de vida
+app.get('/', function(req, res) {
+    res.send('API está no ar!');
 });
 
-
-app.post('/pessoa', function(req, resp){
-  console.log(req.body);
-  resp.json({
-    "statucCode": 200
-  })
-})
-
-
+// Inicia o servidor
 app.listen(3000, function() {
-  console.log('Servidor rodando em http://localhost:3000');
+    console.log('Servidor rodando em http://localhost:3000');
 });
 
