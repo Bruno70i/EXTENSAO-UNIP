@@ -3,7 +3,7 @@
 
 var express = require('express');
 var router = express.Router();
-var db = require('../../db');  // importa o objeto db de db.js
+var db = require('../db');  // importa o objeto db de db.js
 
 // 1) Listar todos os usuários
 router.get('/', function(req, res) {
