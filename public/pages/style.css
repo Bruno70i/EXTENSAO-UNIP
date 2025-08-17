@@ -11,7 +11,7 @@
     --cor-composto4: #AD932B;
     --cor-composto5: #6E5837;
     --cor-composto6: #6E6337;
-    --cor-composto7: #000BED; 
+    --cor-composto7: #247c3a; 
     --cor-composto8: #0056ED;
     --cor-composto9: #4200ED;
     --cor-composto10: #374B6E;
@@ -383,7 +383,7 @@ button:hover {
     margin: auto;
     text-align: center;
     padding: 30px;
-    background-color: #000BED; /* aqui vai o back grand de imagme- */
+    background-color: var(--cor-composto7); /* aqui vai o back grand de imagme- */
 }
 
 .div-revolucao {
