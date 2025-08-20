@@ -8,7 +8,62 @@
 
 </head>
 <body>
-    
+    <section class="card" role="region" aria-labelledby="title">
+
+
+<h1 id="title">Fazer login</h1>
+<p class="helper">Entre para acessar sua conta.</p>
+
+
+<form id="login" action="#" method="post" novalidate>
+<div class="field">
+<label for="email">E-mail</label>
+<div class="control">
+<input id="email" name="email" type="email" placeholder="voce@exemplo.com" autocomplete="email" required aria-invalid="false" />
+</div>
+</div>
+
+
+<div class="field">
+<label for="password">Senha</label>
+<div class="control">
+<input id="password" name="password" type="password" placeholder="Sua senha" autocomplete="current-password" minlength="6" required aria-invalid="false" />
+<button type="button" class="toggle" aria-label="Mostrar ou ocultar senha" title="Mostrar/Ocultar">
+<svg id="eye" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path>
+<circle cx="12" cy="12" r="3"></circle>
+</svg>
+</button>
+</div>
+</div>
+
+
+<div class="row">
+<label style="display:flex; align-items:center; gap:8px; font-size:14px">
+<input type="checkbox" name="remember" /> Lembrar de mim
+</label>
+<small><a href="#" rel="nofollow">Esqueci minha senha</a></small>
+</div>
+
+
+<div class="actions">
+<button type="submit">Entrar</button>
+<div class="status" id="status" aria-live="polite"></div>
+</div>
+
+
+<div class="divider">ou</div>
+<div class="oauth">
+<button type="button" aria-label="Entrar com Google">Continuar com Google</button>
+<button type="button" aria-label="Entrar com GitHub">Continuar com GitHub</button>
+</div>
+</form>
+
+
+<footer>
+Não tem conta? <a href="#">Criar conta</a>
+</footer>
+</section>
 
 
     <script src="#"></script>

@@ -1,0 +1,83 @@
+:root {
+--bg: #f6f7fb;
+--card: #ffffff;
+--text: #111827;
+--muted: #6b7280;
+--primary: #4f46e5;
+--primary-pressed: #4338ca;
+--ring: rgba(79,70,229,0.5);
+--error: #dc2626;
+--ok: #16a34a;
+--border: #e5e7eb;
+}
+@media (prefers-color-scheme: dark) {
+:root {
+--bg: #0b1020;
+--card: #0f172a;
+--text: #e5e7eb;
+--muted: #a1a1aa;
+--primary: #6366f1;
+--primary-pressed: #4f46e5;
+--ring: rgba(99,102,241,0.5);
+--border: #1f2937;
+}
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+margin: 0;
+font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+color: var(--text);
+background:
+radial-gradient(60vmax 60vmax at -10% -10%, rgba(99,102,241,.15), transparent 60%),
+radial-gradient(50vmax 50vmax at 110% -10%, rgba(16,185,129,.12), transparent 60%),
+linear-gradient(180deg, var(--bg), var(--bg));
+display: grid;
+place-items: center;
+padding: 24px;
+}
+
+
+.card {
+width: 100%;
+max-width: 440px;
+background: var(--card);
+border: 1px solid var(--border);
+border-radius: 20px;
+box-shadow: 0 10px 30px rgba(0,0,0,.08);
+padding: 28px;
+backdrop-filter: blur(6px);
+animation: pop .5s ease both;
+}
+@keyframes pop { from { transform: translateY(6px); opacity: 0 } }
+
+
+.brand {
+display: flex; align-items: center; gap: 12px; margin-bottom: 6px;
+}
+.brand svg { width: 36px; height: 36px }
+.brand strong { font-size: 18px; letter-spacing: .3px }
+
+
+h1 { margin: 8px 0 18px; font-size: 22px; }
+p.helper { margin: 0 0 18px; color: var(--muted); font-size: 14px; }
+
+
+form { display: grid; gap: 14px; }
+label { font-size: 14px; }
+
+
+.field { display: grid; gap: 6px; }
+.control { position: relative; }
+input[type="email"], input[type="password"] {
+width: 100%;
+appearance: none;
+border: 1px solid var(--border);
+background: transparent;
+color: inherit;
+border-radius: 12px;
+padding: 12px 44px 12px 12px;
+font-size: 16px;
+footer a:hover { text-decoration: underline; }
+}
