@@ -8,8 +8,53 @@
 
 </head>
 <body>
-    
+    <header>
+<section class="card">
+<h2>Entre em Contato</h2>
+<p class="helper">Preencha o formulário abaixo e nossa equipe retornará o mais breve possível.</p>
 
-    <script src="#"></script>
+
+<form id="support-form" action="#" method="post" novalidate>
+<div>
+<label for="name">Nome</label>
+<input id="name" name="name" type="text" required placeholder="Seu nome" />
+</div>
+
+
+<div>
+<label for="email">E-mail</label>
+<input id="email" name="email" type="email" required placeholder="voce@exemplo.com" />
+</div>
+
+
+<div>
+<label for="subject">Assunto</label>
+<input id="subject" name="subject" type="text" required placeholder="Ex: Problema no login" />
+</div>
+
+
+<div>
+<label for="message">Mensagem</label>
+<textarea id="message" name="message" required placeholder="Descreva seu problema"></textarea>
+</div>
+
+
+<button type="submit">Enviar Mensagem</button>
+</form>
+
+
+<div class="info">
+<p>Também pode falar conosco por e-mail: <a href="mailto:suporte@seusite.com">suporte@seusite.com</a></p>
+<p>Ou ligue para: (11) 4002-8922</p>
+</div>
+</section>
+</main>
+
+
+<footer>
+&copy; 2025 SeuApp. Todos os direitos reservados.
+</footer>
+
+    <script src="Scripts/suporte.js"></script>
 </body>
 </html>
