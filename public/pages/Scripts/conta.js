@@ -1,4 +1,4 @@
-// Alternar visibilidade da senha
+const pwd = document.getElementById('password');
 const toggle = document.querySelector('.toggle');
 const eye = document.getElementById('eye');
 toggle.addEventListener('click', () => {
@@ -54,4 +54,3 @@ return;
 status.textContent = 'Validado! Pronto para enviar ao servidor.';
 status.classList.add('ok');
 });
-
