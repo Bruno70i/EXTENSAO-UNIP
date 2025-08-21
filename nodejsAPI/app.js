@@ -1,28 +1,34 @@
-// app.js
-var express = require('express');
-var app = express();
+// app.js (ES Modules)
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { createTable } from './controllers/users.js'; // importa a funcao sql que cria a tabela
+import router from './routes.js';
 
-// Habilita JSON no corpo das requisições
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
+// subi um nível para chegar em D:\github\EXTENSAO-UNIP
+const projectRoot = path.resolve(__dirname, '..');
+
+const app = express();
 app.use(express.json());
 
-// uma forma do servidor  mostrar os arquivos estáticos, tipo os arquivos HTML CSS e JavaScript antes de processar as outras requisições
-app.use(express.static('public'));
+// Serve qualquer arquivo estático dentro de D:\github\EXTENSAO-UNIP\public
+app.use(express.static(path.join(projectRoot, 'public')));
 
-// Importa as rotas de users
-var usersRouter = require('./controllers/users');
-
-// Monta o router em '/users'
-app.use('/users', usersRouter);
-
-// Rota raiz apenas para teste de vida
-app.get('/', function(req, res) {
-    res.send('API está no ar!');
+// Forçar GET / a retornar o index que está em public/pages/index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(projectRoot, 'public', 'pages', 'index.html'));
 });
 
-// Inicia o servidor
+// rotas da API
+app.use(router);
+
+createTable(); // executa funcao sql que cria a tabela
+
 app.listen(3000, function() {
     console.log('Servidor rodando em http://localhost:3000');
 });
-
-// novo comentario teste
-// novo comentario teste 2
+    
