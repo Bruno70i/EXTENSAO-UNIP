@@ -10,20 +10,21 @@
 <body>
     <section class="card" role="region" aria-labelledby="title">
 
+<!-- inicio do container login-->
+<div id="container-login">
+    <h1 id="title">Fazer login</h1>
+    <p class="comment">Entre para acessar sua conta.</p>
 
-<h1 id="title">Fazer login</h1>
-<p class="helper">Entre para acessar sua conta.</p>
 
-
-<form id="login" action="#" method="post" novalidate>
+<form id="form-login" action="#" method="post" novalidate>
 <div class="field">
 <label for="email">E-mail</label>
 <div class="control">
 <input id="email" name="email" type="email" placeholder="voce@exemplo.com" autocomplete="email" required aria-invalid="false" />
 </div>
+
+
 </div>
-
-
 <div class="field">
 <label for="password">Senha</label>
 <div class="control">
@@ -46,25 +47,38 @@
 </div>
 
 
-<div class="actions">
-<button type="submit">Entrar</button>
+
+
+<!-- inicio link container-->
+
+<div class="link-container">
+<div class="button">
+<button class="entrar" type="submit">Entrar</button>
 <div class="status" id="status" aria-live="polite"></div>
 </div>
 
+<div class="divisor">ou</div>
 
-<div class="divider">ou</div>
-<div class="oauth">
-<button type="button" aria-label="Entrar com Google">Continuar com Google</button>
-<button type="button" aria-label="Entrar com GitHub">Continuar com GitHub</button>
+<div class="link">
+<button class="google" type="button" aria-label="Entrar com Google">Continuar com Google</button>
 </div>
+
 </form>
 
 
 <footer>
 Não tem conta? <a href="#">Criar conta</a>
 </footer>
+
+</div>
+</div>
+<!-- fim -->
+
+ <!-- fim do container login-->
+
 </section>
 
     <script src="Scripts/conta.js"></script>
+
 </body>
 </html>
