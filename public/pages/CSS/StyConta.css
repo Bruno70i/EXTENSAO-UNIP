@@ -7,16 +7,18 @@ body{
 }
 
 
- /*  container geral*/
+ /*  Container Geral*/
  .card{
     display: flex;
     flex-direction: column;
+    padding: 1.5rem;
 }
 
 #container-login {
-    margin: auto;
+    margin: 20px;
     background-color: white;
-    padding: 100px;
+   padding: 10px;
+    
 }
 
 .link-container{
@@ -28,10 +30,10 @@ section{
 
 }
 
-/* container geral-fim */
+/*fim */
 
 
-/* botao em geral*/
+/* Botao Geral*/
 button{
     
 }
@@ -45,7 +47,6 @@ button{
     background-color: white;
     transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s;
     padding: 10px;
-    
 }
 
 .google:hover{
@@ -57,7 +58,7 @@ button{
 
 .entrar{
     border: none;
-  padding: .50rem 1.25rem;
+  padding: 5px 10px;
   border-radius: 10rem;
   color: black;
   text-transform: uppercase;
@@ -94,12 +95,13 @@ button{
     &:before {
       width: 100%;
     }
-  
+/* FIM-Botao Geral */
 
 /* header do site*/
 
 #title{
-    padding: 10px;
+    padding: 30px;
     font-family: 'Times New Roman', Times, serif;
 }
 
+/*fim */
