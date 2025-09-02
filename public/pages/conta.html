@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="t-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,78 +8,86 @@
     <link rel="stylesheet" href="CSS/StyConta.css">
 
 </head>
+
 <body>
     <section class="card" role="region" aria-labelledby="title">
 
-<!-- inicio do container login-->
-<div id="container-login">
-    <h1 id="title">Fazer login</h1>
-    <p class="comment">Entre para acessar sua conta.</p>
+        <!-- inicio do container login-->
+        <div id="container-login">
+            <h1 id="title">Fazer login</h1>
+            <p class="comment">Entre para acessar sua conta.</p>
 
 
-<form id="form-login" action="#" method="post" novalidate>
-<div class="field">
-<label for="email">E-mail</label>
-<div class="control">
-<input id="email" name="email" type="email" placeholder="voce@exemplo.com" autocomplete="email" required aria-invalid="false" />
-</div>
+            <form id="form-login" action="#" method="post" novalidate>
+                <div class="field">
+                    <label for="email">E-mail</label>
+                    <div class="control">
+                        <input id="email" name="email" type="email" placeholder="voce@exemplo.com" autocomplete="email"
+                            required aria-invalid="false" />
+                    </div>
 
 
-</div>
-<div class="field">
-<label for="password">Senha</label>
-<div class="control">
-<input id="password" name="password" type="password" placeholder="Sua senha" autocomplete="current-password" minlength="6" required aria-invalid="false" />
-<button type="button" class="toggle" aria-label="Mostrar ou ocultar senha" title="Mostrar/Ocultar">
-<svg id="eye" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path>
-<circle cx="12" cy="12" r="3"></circle>
-</svg>
-</button>
-</div>
-</div>
+                </div>
+                <div class="field">
+                    <label for="password">Senha</label>
+                    <div class="control">
+                        <input id="password" name="password" type="password" placeholder="Sua senha"
+                            autocomplete="current-password" minlength="6" required aria-invalid="false" />
+                        <button type="button" class="toggle" aria-label="Mostrar ou ocultar senha"
+                            title="Mostrar/Ocultar">
+                            <svg id="eye" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
 
 
-<div class="row">
-<label style="display:flex; align-items:center; gap:8px; font-size:14px">
-<input type="checkbox" name="remember" /> Lembrar de mim
-</label>
-<small><a href="#" rel="nofollow">Esqueci minha senha</a></small>
-</div>
+                <div class="row">
+                    <label>
+                        <input type="checkbox" name="remember" /> Lembrar de mim
+                    </label>
+                    <small><a href="#" rel="nofollow">Esqueci minha senha</a></small>
+                </div>
 
 
 
 
-<!-- inicio link container-->
+                <!-- inicio link container-->
 
-<div class="link-container">
-<div class="button">
-<button class="entrar" type="submit">Entrar</button>
-<div class="status" id="status" aria-live="polite"></div>
-</div>
+                <div class="link-container">
+                    <div class="button">
+                        <button class="entrar" type="submit">Entrar</button>
+                        <div class="status" id="status" aria-live="polite"></div>
+                    </div>
 
-<div class="divisor">ou</div>
+                    <div class="divisor">ou</div>
 
-<div class="link">
-<button class="google" type="button" aria-label="Entrar com Google">Continuar com Google</button>
-</div>
+                    <div class="link">
+                        <button class="google" type="button" aria-label="Entrar com Google">Continuar com
+                            Google</button>
+                    </div>
 
-</form>
+            </form>
 
 
-<footer>
-Não tem conta? <a href="#">Criar conta</a>
-</footer>
+            <footer>
+                Não tem conta? <a href="#">Criar conta</a>
+            </footer>
 
-</div>
-</div>
-<!-- fim -->
+        </div>
+        </div>
+        <!-- fim -->
 
- <!-- fim do container login-->
+        <!-- fim do container login-->
 
-</section>
+    </section>
 
     <script src="Scripts/conta.js"></script>
 
 </body>
+
 </html>
