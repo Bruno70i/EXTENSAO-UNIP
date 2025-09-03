@@ -1,93 +1,194 @@
-<!DOCTYPE html>
-<html lang="t-br">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conta</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Página de Conta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="color-scheme" content="light dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/StyConta.css">
-
+    <style>
+    </style>
 </head>
 
 <body>
-    <section class="card" role="region" aria-labelledby="title">
+    <header class="#">
+        <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+            <div class="flex items-center gap-3">
+                <div class="h-10 w-10 overflow-hidden rounded-2xl ring-1 ring-gray-300 dark:ring-gray-800">
+                    <img src="https://i.pravatar.cc/120?img=12" alt="Avatar" class="h-full w-full object-cover" />
+                </div>
+                <div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Logado como</p>
+                    <h1 class="text-lg font-semibold">Heitor F. Soares</h1>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <button class="btn" id="themeToggle">🌙/☀️</button>
+                <button class="btn">Sair</button>
+            </div>
+        </div>
+    </header>
 
-        <!-- inicio do container login-->
-        <div id="container-login">
-            <h1 id="title">Fazer login</h1>
-            <p class="comment">Entre para acessar sua conta.</p>
+    <main class="Container">
+        <aside class="card h-max p-3 md:sticky md:top-20">
+            <nav class="grid gap-2" id="tabsNav">
+                <button class="tab btn tab-active" data-tab="perfil">Perfil</button>
+                <button class="tab btn" data-tab="seguranca">Segurança</button>
+                <button class="tab btn" data-tab="enderecos">Endereços</button>
+                <button class="tab btn" data-tab="pedidos">Pedidos</button>
+                <button class="tab btn" data-tab="notificacoes">Notificações</button>
+            </nav>
+        </aside>
 
-
-            <form id="form-login" action="#" method="post" novalidate>
-                <div class="field">
-                    <label for="email">E-mail</label>
-                    <div class="control">
-                        <input id="email" name="email" type="email" placeholder="voce@exemplo.com" autocomplete="email"
-                            required aria-invalid="false" />
+        <section class="space-y-6">
+            <div id="tab-perfil" class="card">
+                <h2 class="text-xl font-semibold mb-4">Informações do perfil</h2>
+                <form class="grid gap-4 md:grid-cols-2">
+                    <div class="field">
+                        <label class="label" for="nome">Nome completo</label>
+                        <input class="input" id="nome" type="text" placeholder="Seu nome" />
                     </div>
+                    <div class="field">
+                        <label class="label" for="email">E-mail</label>
+                        <input class="input" id="email" type="email" placeholder="voce@email.com" />
+                    </div>
+                    <div class="field">
+                        <label class="label" for="telefone">Telefone</label>
+                        <input class="input" id="telefone" type="tel" placeholder="(11) 99999-9999" />
+                    </div>
+                    <div class="field">
+                        <label class="label" for="nascimento">Data de nascimento</label>
+                        <input class="input" id="nascimento" type="date" />
+                    </div>
+                    <div class="md:col-span-2 flex justify-end gap-2">
+                        <button class="btn">Cancelar</button>
+                        <button class="btn btn-primary">Salvar</button>
+                    </div>
+                </form>
+            </div>
 
+            <div id="tab-seguranca" class="card hidden">
+                <h2 class="text-xl font-semibold mb-4">Segurança</h2>
+                <form class="grid gap-4 md:grid-cols-2">
+                    <div class="field md:col-span-2">
+                        <label class="label" for="senha-atual">Senha atual</label>
+                        <input class="input" id="senha-atual" type="password" />
+                    </div>
+                    <div class="field">
+                        <label class="label" for="senha-nova">Nova senha</label>
+                        <input class="input" id="senha-nova" type="password" />
+                    </div>
+                    <div class="field">
+                        <label class="label" for="senha-confirma">Confirmar nova senha</label>
+                        <input class="input" id="senha-confirma" type="password" />
+                    </div>
+                    <div class="md:col-span-2 flex justify-end gap-2">
+                        <button class="btn">Cancelar</button>
+                        <button class="btn btn-primary">Atualizar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="tab-enderecos" class="card hidden">
+                <h2 class="tab-enderenco-name">Endereços</h2>
+                <div id="listaEnderecos" class="grid gap-4 md:grid-cols-2"></div>
+            </div>
+
+            <div id="tab-pedidos" class="card hidden">
+                <h2 class="tab-pedido-name">Histórico de pedidos</h2>
+                <div class="">
+
+                    <table class="">
+                        <thead class="bg-gray-50 dark:bg-gray-900/40">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-xs font-medium uppercase">Pedido</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium uppercase">Data</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium uppercase">Status</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium uppercase">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyPedidos"
+                            class="divide-y divide-gray-200 bg-white/60 dark:divide-gray-800 dark:bg-gray-900/30">
+                        </tbody>
+                    </table>
 
                 </div>
-                <div class="field">
-                    <label for="password">Senha</label>
-                    <div class="control">
-                        <input id="password" name="password" type="password" placeholder="Sua senha"
-                            autocomplete="current-password" minlength="6" required aria-invalid="false" />
-                        <button type="button" class="toggle" aria-label="Mostrar ou ocultar senha"
-                            title="Mostrar/Ocultar">
-                            <svg id="eye" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path>
-                                <circle cx="12" cy="12" r="3"></circle>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+            </div>
 
-
-                <div class="row">
-                    <label>
-                        <input type="checkbox" name="remember" /> Lembrar de mim
+            <div id="tab-notificacoes" class="card hidden">
+                <h2 class="text-xl font-semibold mb-4">Notificações</h2>
+                <form class="space-y-4">
+                    <label class="flex items-start gap-3">
+                        <input type="checkbox" class="mt-1 h-5 w-5" checked />
+                        <span>Novidades por e-mail</span>
                     </label>
-                    <small><a href="#" rel="nofollow">Esqueci minha senha</a></small>
-                </div>
-
-
-
-
-                <!-- inicio link container-->
-
-                <div class="link-container">
-                    <div class="button">
-                        <button class="entrar" type="submit">Entrar</button>
-                        <div class="status" id="status" aria-live="polite"></div>
+                    <label class="flex items-start gap-3">
+                        <input type="checkbox" class="mt-1 h-5 w-5" />
+                        <span>Alertas de segurança</span>
+                    </label>
+                    <div class="flex justify-end gap-2">
+                        <button class="btn">Restaurar</button>
+                        <button class="btn btn-primary">Salvar</button>
                     </div>
+                </form>
+            </div>
+        </section>
 
-                    <div class="divisor">ou</div>
+    </main>
 
-                    <div class="link">
-                        <button class="google" type="button" aria-label="Entrar com Google">Continuar com
-                            Google</button>
-                    </div>
+    <footer class="#">
+        © <span id="year"></span> Sua Empresa
+    </footer>
 
-            </form>
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        function applyTheme(mode) {
+            document.documentElement.classList.toggle('dark', mode === 'dark');
+            localStorage.setItem('theme', mode);
+        }
+        applyTheme(localStorage.getItem('theme') || 'light');
+        themeToggle.addEventListener('click', () => {
+            applyTheme(document.documentElement.classList.contains('dark') ? 'light' : 'dark');
+        });
 
+        const nav = document.getElementById('tabsNav');
+        const tabs = [...nav.querySelectorAll('.tab')];
+        const sections = {
+            perfil: document.getElementById('tab-perfil'),
+            seguranca: document.getElementById('tab-seguranca'),
+            enderecos: document.getElementById('tab-enderecos'),
+            pedidos: document.getElementById('tab-pedidos'),
+            notificacoes: document.getElementById('tab-notificacoes'),
+        };
+        function activateTab(key) {
+            tabs.forEach(btn => btn.classList.remove('tab-active'));
+            Object.values(sections).forEach(el => el.classList.add('hidden'));
+            nav.querySelector(`[data-tab="${key}"]`).classList.add('tab-active');
+            sections[key].classList.remove('hidden');
+        }
+        tabs.forEach(btn => btn.addEventListener('click', () => activateTab(btn.dataset.tab)));
+        activateTab('perfil');
 
-            <footer>
-                Não tem conta? <a href="#">Criar conta</a>
-            </footer>
+        const pedidos = [
+            { id: '#1024', data: '2025-06-12', status: 'Entregue', total: 249.90 },
+            { id: '#1023', data: '2025-05-28', status: 'Em transporte', total: 149.50 }
+        ];
+        const tbody = document.getElementById('tbodyPedidos');
+        pedidos.forEach(p => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td class='px-4 py-3'>${p.id}</td>
+        <td class='px-4 py-3'>${new Date(p.data).toLocaleDateString()}</td>
+        <td class='px-4 py-3'>${p.status}</td>
+        <td class='px-4 py-3'>R$ ${p.total.toFixed(2)}</td>`;
+            tbody.appendChild(tr);
+        });
 
-        </div>
-        </div>
-        <!-- fim -->
-
-        <!-- fim do container login-->
-
-    </section>
-
-    <script src="Scripts/conta.js"></script>
-
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
